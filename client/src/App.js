@@ -3,13 +3,14 @@ import { Route } from 'react-router-dom';
 import UserContext from './contexts/UserContext';
 
 import './App.css';
+import Routes from './Routes';
 
 import Signup from './components/Signup/Signup';
 
 function App() {
     return (
         <div className='App'>
-            <Route exact path='/signup' component={Signup} />
+            <Routes />
         </div>
     );
 }
