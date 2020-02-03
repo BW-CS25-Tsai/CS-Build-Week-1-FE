@@ -1,0 +1,12 @@
+{
+  "name": "CS-Build-Week-1-FE",
+  "version": "1.0.0",
+  "description": "CS-Build-Week-1-FE",
+  "main": "index.js",
+  "repository": "https://github.com/BW-CS25-Tsai/CS-Build-Week-1-FE.git",
+  "author": "umbur <you@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
