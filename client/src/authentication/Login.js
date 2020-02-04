@@ -27,11 +27,11 @@ export default function Login(props) {
   const submitHandler = (e, state) => {
     e.preventDefault();
     axios
-      .post("https://reqres.in/api/login", state)
+      .post("https://lambda-mud-test.herokuapp.com/api/login/", state)
       .then(res => {
         console.log("RESPONSE", res);
         localStorage.setItem("token", res.data.key);
-        props.history.push("/");
+        props.history.push("/mainpage");
       })
       .catch(err => {
         console.log(err);
