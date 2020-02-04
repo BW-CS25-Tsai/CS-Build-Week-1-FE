@@ -4,7 +4,7 @@
     align-items: center;
     margin-top: 10%;
     border: 3px solid white;
-    width: 33%;
+    background: rgb(45, 45, 183);
 }
 
 .login-title {
@@ -30,10 +30,9 @@
 .login-button {
     display: flex;
     justify-content: center;
-    background: purple;
     width: 150px;
     height: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: black;
 }
