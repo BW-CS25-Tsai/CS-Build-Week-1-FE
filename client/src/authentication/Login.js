@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import dragon from "./reddragon.jpg"
 import { createGlobalStyle } from "styled-components";
+import "./login.css";
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
   body {
@@ -58,10 +59,10 @@ export default function Login(props) {
         onSubmit={e => submitHandler(e, state)}
       >
         <div>
-          <Title> Sign in to your account </Title>
+          <div className="title"> Sign in to your account </div>
           {/* <img src={dragon} style={{ width: "7.5rem" }} /> */}
 
-          <Label> Username </Label>
+          <div className="label"> Username </div>
           <input
             type="text"
             name="username"
@@ -72,7 +73,7 @@ export default function Login(props) {
           />
         </div>
         <div>
-          <Label> Password </Label>
+          <div className="label"> Password </div>
           <input
             type="password"
             name="password"
@@ -98,10 +99,10 @@ export default function Login(props) {
           Login
         </button>
         <div>
-          <Bottom>Don't have an account?</Bottom>
+          <div className="bottom">Don't have an account?</div>
           <div>
             <Link to="/registration">
-              <Signup>SIGN UP</Signup>
+              <div className="signup">SIGN UP</div>
             </Link>
           </div>
         </div>
@@ -110,33 +111,33 @@ export default function Login(props) {
   );
 }
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #f5f5f3;
-  margin-top: 0px;
-  padding-top: 50px;
-  font-family: "Press Start 2P", cursive;
-  padding-bottom: 60px;
-`;
-const Label = styled.h1`
-  font-size: 1em;
-  text-align: center;
-  color: white;
-  padding-top: 10px;
-  font-family: "Press Start 2P", cursive;
-`;
-const Bottom = styled.h1`
-  font-size: 1em;
-  text-align: center;
-  color: red;
-  padding-top: 28px;
-  font-family: "Press Start 2P", cursive;
-`;
-const Signup = styled.h1`
-  font-size: 1em;
-  text-align: center;
-  color: red;
-  padding-top: 5px;
-  font-family: "Press Start 2P", cursive;
-`;
+// const Title = styled.h1`
+//   font-size: 1.5em;
+//   text-align: center;
+//   color: #f5f5f3;
+//   margin-top: 0px;
+//   padding-top: 50px;
+//   font-family: "Press Start 2P", cursive;
+//   padding-bottom: 60px;
+// `;
+// const Label = styled.h1`
+//   font-size: 1em;
+//   text-align: center;
+//   color: white;
+//   padding-top: 10px;
+//   font-family: "Press Start 2P", cursive;
+// `;
+// const Bottom = styled.h1`
+//   font-size: 1em;
+//   text-align: center;
+//   color: red;
+//   padding-top: 28px;
+//   font-family: "Press Start 2P", cursive;
+// `;
+// const Signup = styled.h1`
+//   font-size: 1em;
+//   text-align: center;
+//   color: red;
+//   padding-top: 5px;
+//   font-family: "Press Start 2P", cursive;
+// `;
