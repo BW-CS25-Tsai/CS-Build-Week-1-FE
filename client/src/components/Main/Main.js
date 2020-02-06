@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import  Border  from "../Main/Border";
 import useMaze from "../Main/Map";
-import  Character  from "../Main/player";
+import  Character  from "../Main/Player";
 import Dashboard from "../Main/RoomInfo";
 import React from "react";
 import { withRouter } from "react-router-dom";
