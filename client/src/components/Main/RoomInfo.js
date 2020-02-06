@@ -1,12 +1,41 @@
+// import React from 'react';
+
+// const RoomInfo = ({ player }) => {
+//     return (
+//         <div className='info-panel'>
+//             <p className='title'>{player.title}</p>
+//             <p className='description'>{player.description}</p>
+//         </div>
+//     );
+// };
+
+// export default RoomInfo;
 import React from 'react';
 
-const RoomInfo = ({ player }) => {
+import { StyledDashBoard } from '../Main/Styles/styles';
+
+const Dashboard = ({ directions, history }) => {
     return (
-        <div className='info-panel'>
-            <p className='title'>{player.title}</p>
-            <p className='description'>{player.description}</p>
-        </div>
+        <StyledDashBoard>
+            <button
+                onClick={() => {
+                    localStorage.clear();
+                    history.push('/login');
+                }}
+            >
+                Logout
+            </button>
+            {/* <div>
+        <h3>Current Room</h3>
+        <h4>{directions ? directions.title : null}</h4>
+      </div>
+      <div>
+        <h3>Description</h3>
+        <h4>{directions ? directions.description : null}</h4>
+      </div>
+      {directions.error_msg && <span>{directions.error_msg}</span>} */}
+        </StyledDashBoard>
     );
 };
 
-export default RoomInfo;
+export default Dashboard;
