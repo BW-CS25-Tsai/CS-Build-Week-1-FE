@@ -39,7 +39,7 @@ const Game = ({ history }) => {
     <GameContainer>
       {loaded && (
         <GameArena width={30} height={40}>
-          <Border maze={maze} width={30} height={30} />
+          <Border maze={maze} width={30} height={35} />
           <Character x={x} y={y} />
         </GameArena>
       )}

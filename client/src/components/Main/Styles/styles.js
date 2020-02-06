@@ -18,8 +18,8 @@ export const StyledBorder = styled.section`
 
 export const StyledCharacter = styled.div`
   background: #fff;
-  margin: 2px;
-  border-radius: 2px;
+  margin: 3px;
+  border-radius: 3px;
 `;
 
 export const StyledDashBoard = styled.div`
