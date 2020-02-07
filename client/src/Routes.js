@@ -5,16 +5,16 @@ import Login from "./authentication/Login";
 // import Register from "./authentication/Register";
 // import PrivateRoute from "./authentication/PrivateRoute";
 import Signup from "./components/Signup/Signup";
-import Main from "./components/Main/Main";
+import Main from "./components/Main/Map";
 
 function Routes(props) {
   return (
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" render={props => <Login {...props} />} />
-          <Route path="/registration" render={props => <Signup {...props} />} />
-          <Route path="/mainpage" render={props => <Main {...props} />} />
+          <Route exact path="/" component={Login} />} />
+          <Route path="/registration" component={Signup} />} />
+          <Route path="/mainpage" component={Main} />} />
           {/* <PrivateRoute exact path="/" component={Dashboard} /> */} */}
         </Switch>
       </BrowserRouter>

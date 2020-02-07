@@ -1,0 +1,49 @@
+
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .grid-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    .grid {
+      padding: 4%;
+      width: 700px;
+      height: 660px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap-reverse;
+
+    }
+
+  }
+
+  .control-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50px;
+    .directions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     align-items: center;
+      margin-top: 100px;
+
+    }
+
+    .game-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 80px;
+      max-width: 240px;
+
+    }
+
+  }
+  
+}
