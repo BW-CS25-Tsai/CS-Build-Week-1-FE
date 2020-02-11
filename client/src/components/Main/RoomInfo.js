@@ -1,41 +1,33 @@
-// import React from 'react';
+import React from "react";
+import './Styles/room.scss'
 
-// const RoomInfo = ({ player }) => {
-//     return (
-//         <div className='info-panel'>
-//             <p className='title'>{player.title}</p>
-//             <p className='description'>{player.description}</p>
-//         </div>
-//     );
-// };
+export default function Room(props) {
+  let borderRight =
+    props.room.e_to > 0 ? "5px solid dodgerblue" : "5px solid red";
+  let borderLeft =
+    props.room.w_to > 0 ? "5px solid dodgerblue" : "5px solid red";
+  let borderTop =
+    props.room.n_to > 0 ? "5px solid dodgerblue" : "5px solid red";
+  let borderBottom =
+    props.room.s_to > 0 ? "5px solid dodgerblue" : "5px solid red";
+  let background = props.playerRoomId === props.room.id ? "black" : "lightgrey";
 
-// export default RoomInfo;
-import React from 'react';
 
-import { StyledDashBoard } from '../Main/Styles/styles';
 
-const Dashboard = ({ directions, history }) => {
-    return (
-        <StyledDashBoard>
-            <button
-                onClick={() => {
-                    localStorage.clear();
-                    history.push('/login');
-                }}
-            >
-                Logout
-            </button>
-            {/* <div>
-        <h3>Current Room</h3>
-        <h4>{directions ? directions.title : null}</h4>
-      </div>
-      <div>
-        <h3>Description</h3>
-        <h4>{directions ? directions.description : null}</h4>
-      </div>
-      {directions.error_msg && <span>{directions.error_msg}</span>} */}
-        </StyledDashBoard>
-    );
-};
+  return (
+    <div
+      className="game-board"
+      style={{
+        borderRight: borderRight,
+        borderLeft: borderLeft,
+        borderTop: borderTop,
+        borderBottom: borderBottom,
+        background: background
 
-export default Dashboard;
+      }}
+
+    ></div>
+
+  );
+
+}

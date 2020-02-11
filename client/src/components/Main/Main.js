@@ -9,20 +9,17 @@
 //     return <div>The main page content should be here...</div>;
 // }
 import styled from 'styled-components';
-import Border from '../Main/Border';
 import useMaze from '../Main/Map';
-import Character from '../Main/Player';
+import Map from '../Main/Map'
 import Dashboard from '../Main/RoomInfo';
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 export const GameContainer = styled.div`
-    background-image: url(https://phandroid.s3.amazonaws.com/wp-content/uploads/2015/02/galaxy-wallpaper-1.jpg);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
 `;
 
 export const GameArena = styled.section`
@@ -46,16 +43,10 @@ const Game = ({ history }) => {
     const { x, y, maze, loaded, directions } = useMaze();
 
     return (
-        <GameContainer>
-            {loaded && (
-                <GameArena width={30} height={40}>
-                    <Border maze={maze} width={30} height={35} />
-                    <Character x={x} y={y} />
-                </GameArena>
-            )}
-
-            <Dashboard directions={directions} history={history} />
-        </GameContainer>
+   
+       <Dashboard directions={directions} history={history}  />
+       <Map />
+  
     );
 };
 
